@@ -10,7 +10,7 @@ const posts = [
 ];
 
 //포스트 작성 POST
-exports.write = ctx => {
+export const write = ctx => {
   //REST API Body 조회 = ctx.request.body
   const { title, body } = ctx.request.body;
   postId += 1;
@@ -24,12 +24,12 @@ exports.write = ctx => {
 };
 
 //포스트 목록조회 GET
-exports.list = ctx => {
+export const list = ctx => {
   ctx.body = posts;
 };
 
 //특정 포스트 조회 GET
-exports.read = ctx => {
+export const read = ctx => {
   const { id } = ctx.params;
   const post = posts.find(p => p.id.toString() === id);
   //포스트가 없을경우
@@ -44,7 +44,7 @@ exports.read = ctx => {
 };
 
 //특정 포스트 제거 DELETE
-exports.remove = ctx => {
+export const remove = ctx => {
   const { id } = ctx.params;
   const index = posts.findIndex(p => p.id.toString() === id);
   //포스트가 없을경우
@@ -60,7 +60,7 @@ exports.remove = ctx => {
 };
 
 //포스트 수정 PUT
-exports.replace = ctx => {
+export const replace = ctx => {
   const { id } = ctx.params;
   const index = posts.findIndex(p => p.id.toString() === id);
   if (index === -1) {
@@ -79,7 +79,7 @@ exports.replace = ctx => {
 };
 
 //포스트 수정 PATCH
-exports.update = ctx => {
+export const update = ctx => {
   const { id } = ctx.params;
   const index = posts.findIndex(p => p.id.toString() === id);
   if (index === -1) {
