@@ -3,10 +3,6 @@ import User from '../../models/user';
 
 /*
   POST /api/auth/register
-  {
-    username: 'velopert',
-    password: 'mypass123'
-  }
 */
 export const register = async ctx => {
   // Request Body 검증하기
@@ -23,7 +19,7 @@ export const register = async ctx => {
 
   const { username, password } = ctx.request.body;
   try {
-    // username  이 이미 존재하는지 확인
+    // username가 이미 존재하는지 확인
     const exists = await User.findByUsername(username);
     if (exists) {
       ctx.status = 409; // Conflict
