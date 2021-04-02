@@ -3,6 +3,10 @@ import User from '../../models/user';
 
 /*
   POST /api/auth/register
+  {
+    username: 'velopert',
+    password: 'mypass123'
+  }
 */
 export const register = async ctx => {
   // Request Body 검증하기
