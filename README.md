@@ -31,6 +31,9 @@
 > 수정 화면입니다. -> editor사용가능
 >
 ![](images/수정.png)
-> 로그인, 회원가입 화면입니다. (Pagination)
-> ![](images/Login.png)
-> ![](images/Register.png)
+> 로그인 화면입니다.
+> 
+![](images/Login.png)
+>회원가입 화면입니다.
+> 
+![](images/Register.png)
