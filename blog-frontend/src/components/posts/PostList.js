@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 
 const PostItem = ({ post }) => {
   const { publishedDate, user, tags, title, body, _id } = post;
+
   return (
     <PostItemBlock>
       <h2>
@@ -63,14 +64,12 @@ const WritePostButtonWrapper = styled.div`
 const PostItemBlock = styled.div`
   padding-top: 3rem;
   padding-bottom: 3rem;
-  /* 맨 위 포스트는 padding-top 없음 */
   &:first-child {
     padding-top: 0;
   }
   & + & {
     border-top: 1px solid ${palette.gray[2]};
   }
-
   h2 {
     font-size: 2rem;
     margin-bottom: 0;

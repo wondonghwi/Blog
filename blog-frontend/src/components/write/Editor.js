@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import palette from '../../lib/styles/palette';
 import Responsive from '../common/Responsive';
 
-const Editor = ({ title, onChangeField }) => {
+const Editor = ({ title, body, onChangeField }) => {
   const quillElement = useRef(null); // Quill을 적용할 DivElement를 설정
   const quillInstance = useRef(null); // Quill 인스턴스를 설정
 
@@ -31,6 +31,10 @@ const Editor = ({ title, onChangeField }) => {
       }
     });
   }, [onChangeField]);
+
+  useEffect(() => {
+    quillInstance.current.root.innerHTML = body;
+  }, []); /* eslint-disable-line */
 
   const onChangeTitle = e => {
     onChangeField({ key: 'title', value: e.target.value });

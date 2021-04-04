@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import qs from 'qs';
 
-const PaginationContainer = ({ location }) => {
+const PaginationContainer = ({ location, match }) => {
   const { lastPage, posts, loading } = useSelector(({ posts, loading }) => ({
     lastPage: posts.lastPage,
     posts: posts.posts,
@@ -13,7 +13,9 @@ const PaginationContainer = ({ location }) => {
 
   if (!posts || loading) return null;
 
-  const { tag, username, page = 1 } = qs.parse(location.search, {
+  const { username } = match.params;
+
+  const { tag, page = 1 } = qs.parse(location.search, {
     ignoreQueryPrefix: true,
   });
 
