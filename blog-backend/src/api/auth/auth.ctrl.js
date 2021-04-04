@@ -19,7 +19,7 @@ export const register = async ctx => {
 
   const { username, password } = ctx.request.body;
   try {
-    // username가 이미 존재하는지 확인
+    // username  이 이미 존재하는지 확인
     const exists = await User.findByUsername(username);
     if (exists) {
       ctx.status = 409; // Conflict

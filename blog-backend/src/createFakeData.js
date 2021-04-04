@@ -1,6 +1,6 @@
 import Post from './models/post';
 
-export const createFakeData = () => {
+export default function createFakeData() {
   // 0, 1, ... 39 로 이루어진 배열 생성 후 포스트 데이터로 변환
   const posts = [...Array(40).keys()].map(i => ({
     title: `포스트 #${i}`,
@@ -11,6 +11,4 @@ export const createFakeData = () => {
   Post.insertMany(posts, (err, docs) => {
     console.log(docs);
   });
-};
-
-export default createFakeData();
+}
