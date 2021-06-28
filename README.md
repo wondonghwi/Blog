@@ -1,4 +1,4 @@
-# 블로그 구현 Project -> 현재 서버 호스팅X
+# React와 node.js를 이용한 블로그 구현 Project -> 현재 서버 호스팅X
 
 > 기능
 
