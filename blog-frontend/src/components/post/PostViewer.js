@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import palette from '../../lib/styles/palette';
-import Responsive from '../common/Responsive';
-import SubInfo from '../common/SubInfo';
-import Tags from '../common/Tags';
 import { Helmet } from 'react-helmet-async';
+import Responsive from "components/common/Responsive";
+import palette from "lib/styles/palette";
+import SubInfo from "components/common/SubInfo";
+import Tags from "components/common/Tags";
 
 const PostViewer = ({ post, error, loading, actionButtons, ownPost }) => {
   // 에러 발생 시

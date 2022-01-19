@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
-import palette from '../../lib/styles/palette';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import palette from "lib/styles/palette";
 
 //회원가입 , 로그인 레이아웃
 const AuthTemplate = ({ children }) => {

@@ -1,11 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
-import Responsive from '../common/Responsive';
-import Button from '../common/Button';
-import palette from '../../lib/styles/palette';
-import SubInfo from '../common/SubInfo';
-import Tags from '../common/Tags';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import SubInfo from "components/common/SubInfo";
+import Tags from "components/common/Tags";
+import Button from "components/common/Button";
+import Responsive from "components/common/Responsive";
+import palette from "lib/styles/palette";
 
 const PostItem = ({ post }) => {
   const { publishedDate, user, tags, title, body, _id } = post;

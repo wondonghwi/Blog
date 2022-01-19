@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Button from './Button';
+import Button from "components/common/Button";
 
 const AskModal = ({ visible, title, description, confirmText = '확인', cancelText = '취소', onConfirm, onCancel }) => {
   if (!visible) return null;

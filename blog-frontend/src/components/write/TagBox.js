@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import styled from 'styled-components';
-import palette from '../../lib/styles/palette';
+import palette from "lib/styles/palette";
 
 // React.memo를 사용하여 tag 값이 바뀔 때만 리렌더링되도록 처리
 const TagItem = React.memo(({ tag, onRemove }) => <Tag onClick={() => onRemove(tag)}>#{tag}</Tag>);

@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from './Button';
-import styled from 'styled-components';
-import Responsive from './Responsive';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import Button from "components/common/Button";
+import Responsive from "components/common/Responsive";
 
 const Header = ({ user, onLogout }) => {
   return (

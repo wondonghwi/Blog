@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import Quill from 'quill';
-import 'quill/dist/quill.bubble.css';
 import styled from 'styled-components';
-import palette from '../../lib/styles/palette';
-import Responsive from '../common/Responsive';
+import palette from "lib/styles/palette";
+import Responsive from "components/common/Responsive";
+import 'quill/dist/quill.bubble.css';
 
 const Editor = ({ title, body, onChangeField }) => {
   const quillElement = useRef(null); // Quill을 적용할 DivElement를 설정

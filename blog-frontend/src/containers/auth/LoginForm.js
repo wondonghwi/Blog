@@ -1,9 +1,10 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeField, initializeForm, login } from '../../modules/auth';
-import AuthForm from '../../components/auth/AuthForm';
 import { withRouter } from 'react-router-dom';
-import { check } from '../../modules/user';
+import {changeField, initializeForm, login} from "modules/auth";
+import AuthForm from "components/auth/AuthForm";
+import {check} from "modules/user";
+
 
 const LoginForm = ({ history }) => {
   const [error, setError] = useState(null);
@@ -14,7 +15,7 @@ const LoginForm = ({ history }) => {
     auth: auth.auth,
     authError: auth.authError,
     user: user.user,
-  })); //비구조화할당 진행
+  }));
 
   const onChange = useCallback(
     e => {

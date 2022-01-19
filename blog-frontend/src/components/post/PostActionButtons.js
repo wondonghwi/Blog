@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import palette from '../../lib/styles/palette';
-import AskRemoveModal from './AskRemoveModal';
+import AskRemoveModal from "components/post/AskRemoveModal";
+import palette from "lib/styles/palette";
 
 const PostActionButtons = ({ onEdit, onRemove }) => {
   const [modal, setModal] = useState(false);

@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import qs from 'qs';
-import Button from '../common/Button';
+import styled from 'styled-components';
+import Button from "components/common/Button";
 
 const buildLink = ({ username, tag, page }) => {
   const query = qs.stringify({ tag, page });

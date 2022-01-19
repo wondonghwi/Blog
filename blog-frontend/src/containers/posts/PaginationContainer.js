@@ -1,5 +1,5 @@
 import React from 'react';
-import Pagination from '../../components/posts/Pagination';
+import Pagination from 'components/posts/Pagination';
 import { useSelector } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import qs from 'qs';
